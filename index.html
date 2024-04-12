@@ -117,23 +117,27 @@
             color: #727272;
         }
 
-        .icons{
+        .icons {
             display: flex;
             flex-direction: row;
             text-align: center;
             justify-content: center;
         }
-        .icon{
+
+        .icon {
             display: block;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
-        .icon > a > img{
+
+        .icon>a>img {
             width: 20px;
             height: 20px;
             margin: 10px;
-        } 
+        }
+
         .footer {
             min-height: 80px;
             background-color: black;
@@ -143,11 +147,13 @@
             padding: 1em;
             text-align: center;
         }
-        .footer h2{
+
+        .footer h2 {
             color: rgba(255, 255, 255, 0.732);
             font-size: 15px;
         }
-        .footer p{
+
+        .footer p {
             font-size: 12px;
             line-height: 2.1;
         }
@@ -156,14 +162,31 @@
             .about {
                 flex-direction: column;
                 text-align: center;
+                padding-left: .5em;
+                padding-right: .5em;
             }
 
             .section-head {
-                text-align: center;
+                /* text-align: center; */
             }
+
             .footer {
-            flex-direction: column;
-           
+                flex-direction: column;
+
+            }
+
+            ul {
+                padding-left: 0;
+            }
+
+            ul>ul {
+                border-left: none;
+            }
+
+            .experience>div,
+            .education>div,
+            .publications>div {
+                padding-left: 1em;
             }
         }
     </style>
@@ -266,8 +289,10 @@
             <div class="right">
                 <h2 class="heading">Social media</h2>
                 <div class="icons">
-                    <div class="icon"><a href="http://www.linkedin.com/in/minureghunath"><img src="images/linkedin.png" alt=""></a></div>
-                    <div class="icon"><a href="mailto:ed22d002@smail.iitm.ac.in"><img src="images/gmail.jpg" alt=""></a></div>
+                    <div class="icon"><a href="http://www.linkedin.com/in/minureghunath"><img src="images/linkedin.png"
+                                alt=""></a></div>
+                    <div class="icon"><a href="mailto:ed22d002@smail.iitm.ac.in"><img src="images/gmail.jpg" alt=""></a>
+                    </div>
                 </div>
             </div>
         </div>
