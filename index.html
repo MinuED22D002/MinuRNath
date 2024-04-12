@@ -1,44 +1,278 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minu R Nath</title>
     <style>
-        html,body{
+        * {
+            font-family: Roboto, sans-serif;
+        }
+
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
-        .name{
+
+        .name {
             height: 10vh;
             text-align: center;
             align-content: center;
             color: gray;
             font-family: Roboto, sans-serif;
             font-size: 15pt;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    text-transform: none;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: none;
+            position: fixed;
+            background-color: white;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
-        .about{
+
+        .about {
             background-color: #efefef;
             min-height: 300px;
             display: flex;
+            flex-direction: row;
+            padding-top: 2em;
+
+        }
+
+        .heading {
+            color: #8b8b8b;
+            color: #808080;
+            font-weight: 400;
+        }
+
+        .left,
+        .right {
             flex: .5;
+        }
+
+        .flex-center {
+            justify-content: center;
+            /* Horizontally center the content */
+            align-items: center;
+            /* Vertically center the content */
+            /* height: 100vh; */
+        }
+
+        .profile-img {
+            max-width: 50%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .flex-vc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .experience,
+        .education,
+        .publications {}
+
+        .experience>div,
+        .education>div,
+        .publications>div {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 2em;
+            background-color: #efefef;
+
+        }
+
+        .section-head {
+            margin-left: 1em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul>ul {
+            /* list-style: none; */
+            border-left: 1px solid gray;
+            /* margin-left: 0;
+            padding-left: 0; */
+        }
+
+        li {
+            line-height: 2em;
+            color: gray;
+        }
+
+        .li-head {
+            font-weight: 600;
+            color: #727272;
+        }
+
+        .icons{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+        }
+        .icon{
+            display: block;
+        }
+        a{
+            text-decoration: none;
+        }
+        .icon > a > img{
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        } 
+        .footer {
+            min-height: 80px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            margin-top: 3em;
+            padding: 1em;
+            text-align: center;
+        }
+        .footer h2{
+            color: rgba(255, 255, 255, 0.732);
+            font-size: 15px;
+        }
+        .footer p{
+            font-size: 12px;
+            line-height: 2.1;
+        }
+
+        @media screen and (max-width: 720px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-head {
+                text-align: center;
+            }
+            .footer {
             flex-direction: column;
+           
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="name">Minu R Nath</div>
     </header>
     <div class="about">
-        <div class="left">
-dfdg
+        <div class="left flex-center">
+            <img src="images/profile.jpg" alt="" class="profile-img">
         </div>
-        <div class="right">
-            <h3 class="heading">About</h3>
+        <div class="right flex-vc">
+            <div>
+                <h2 class="heading">About</h2>
+                <p>Research Scholar at Dept of Engineering Design, IIT Madras</p>
+                <p>Experienced educator with industry experience in software development, poised to
+                    advance research at the intersection of education and technology.</p>
+            </div>
         </div>
     </div>
+
+    <div class="experience">
+        <h2 class="heading section-head">Professional experience</h2>
+        <div>
+            <ul>
+                <li class="li-head">Assistant Professor in Information Technology</li>
+                <ul>
+                    <li>Govt. Engineering College, Kerala, India</li>
+                    <li>Nov 2012 - July 2016 & July 2020 - Till date</li>
+                </ul>
+                <li class="li-head">Programmer Analyst</li>
+                <ul>
+                    <li>General Electric, Bangalore, India</li>
+                    <li>July 2011 - Sept 2012</li>
+                </ul>
+                <li class="li-head">Project Engineer</li>
+                <ul>
+                    <li>Wipro Technologies, Bangalore, India</li>
+                    <li>July 2011 - Sept 2012</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="education">
+        <h2 class="heading section-head">Education</h2>
+        <div>
+            <ul>
+                <li class="li-head">MS in Cybersecurity</li>
+                <ul>
+                    <li>Georgia Institute of Technology, Atlanta, USA</li>
+                    <li>Jan 2019 - Dec 2021</li>
+                    <li>Thesis : Analysis of Cryptocurrency Theft Detection using Machine Learning</li>
+                    <li>CGPA : 3.9/4 </li>
+                </ul>
+                <li class="li-head">M.Tech in Information Technology</li>
+                <ul>
+                    <li>Anna University, Coimbatore, Tamil Nadu</li>
+                    <li>August 2009 - June 2011</li>
+                    <li>Thesis : Setting up of a Private Cloud in a Cluster-based environment</li>
+                    <li>CGPA : 9.84 /10</li>
+                </ul>
+                <li class="li-head">B.Tech in Information Technology</li>
+                <ul>
+                    <li>University of Kerala, Thiruvananthapuram, Kerala</li>
+                    <li>Aug 2003- May 2007</li>
+                    <li>CGPA : 8.04/10</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="publications">
+        <h2 class="heading section-head">Publications</h2>
+        <div>
+            <ul>
+                <li class="li-head">Wind power resource assessment and wind-hydrogen generation potential</li>
+                <ul>
+                    <li>A case
+                        study, Energy Sources, Part A: Recovery, Utilization, and Environmental Effects:
+                        Rakesh Narayana Sarma, Vineeth Kumar, Suresh Lal S R, Minu Reghunath, Arya
+                        Jayan & Abhilash Suryan (2022), <a href="">DOI: 10.1080/15567036.2022.2026537</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <h2 class="heading">Address </h2>
+                <p>G4-03, Madras Avenue, Indian Institute of
+                    Technology, Chennai,<br /> Tamilnadu, 600036
+                    <br />Mob: 9633288222
+                </p>
+            </div>
+            <div class="right">
+                <h2 class="heading">Social media</h2>
+                <div class="icons">
+                    <div class="icon"><a href="http://www.linkedin.com/in/minureghunath"><img src="images/linkedin.png" alt=""></a></div>
+                    <div class="icon"><a href="mailto:ed22d002@smail.iitm.ac.in"><img src="images/gmail.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
